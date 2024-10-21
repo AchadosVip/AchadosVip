@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang=pt-BR>
+<head>
+<link rel=stylesheet href=styles.css>
+<title>AchadosVip</title>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<main>
+<div class=img-perfil>
+<img src=perfil.jpg alt=Perfil>
+</div>
+<div class=nomeAchadosVip>
+<h1>AchadosVip</h1>
+</div>
+<div class=barra-de-pesquisa>
+<input type=text id=pesquisa placeholder="Pesquisar anúncios..." oninput=pesquisarAnuncios()>
+</div>
+<div class=container>
+<div class=anuncio>
+<a href=https://s.shopee.com.br/8Ur3XBqIhV>
+<img src="./imagens/umidificador egg.webp" alt="umidificador de ar egg">
+</a>
+<div class=nomes-anuncios>Umidificador Egg</div>
+</div>
+<div class=anuncio>
+<a href=https://s.shopee.com.br/3q5DzJyxFy>
+<img src="./imagens/Maquina cabelo.webp" alt="máquina de cabelo barbeador">
+</a>
+<div class=nomes-anuncios>Máquina de barbear</div>
+</div>
+<div class=anuncio>
+<a href="https://shopee.com.br/Caixa-de-Som-G-Speaker-Luminária-Bluetooth-Inteligente-Carregador-Sem-Fio-Led-Luz-Rgb-Caxinha-i.362859393.23592362841?sp_atk=5c23fb9e-b45f-4db5-963e-175c6ca93c91&xptdk=5c23fb9e-b45f-4db5-963e-175c6ca93c91">
+<img src=./imagens/g.webp alt="G Speaker gspeaker Caixa-de-Som-G-Speaker-Luminária-Bluetooth-Inteligente-Carregador-Sem-Fio-Led-Luz-Rgb-Caxinha-i">
+</a>
+<div class=nomes-anuncios>G-Speaker</div>
+</div>
+<div class=anuncio>
+<a href=https://s.shopee.com.br/BBxZFeOnw>
+<img src=./imagens/PROCESSADOR.webp alt="mini processador eletrico">
+</a>
+<div class=nomes-anuncios>Mini Processador</div>
+</div>
+<div class=anuncio>
+<a href=https://s.shopee.com.br/8AEF74cr56>
+<img src="./imagens/pistola massagem.webp" alt="massageador eletrico pistola massagem">
+</a>
+<div class=nomes-anuncios>Massageador elétrico</div>
+</div>
+<div class=anuncio>
+<a href=https://s.shopee.com.br/1g0lNaPLku>
+<img src=./imagens/lixeira.webp alt="lixeira sensor automatico automatica">
+</a>
+<div class=nomes-anuncios>Lixeira sensor automático</div>
+</div>
+<div class=anuncio>
+<a href=https://s.shopee.com.br/8Ur5WR5oWr>
+<img src="./imagens/escova eletrica.webp" alt="escova eletrica limpeza automatica">
+</a>
+<div class=nomes-anuncios>Escova elétrica</div>
+</div>
+<div class=anuncio>
+<a href=https://s.shopee.com.br/9A6mJpU2Cq>
+<img src="./imagens/kit 3 garrafa~].webp" alt="kit 3 garrafas">
+</a>
+<div class=nomes-anuncios>Kit 3 garrafas</div>
+</div>
+</div>
+</main>
+<script>function removeAcentos(texto){return texto.normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function pesquisarAnuncios(){const termoDePesquisa=removeAcentos(document.getElementById('pesquisa').value.toLowerCase());const anuncios=document.querySelectorAll('.anuncio');anuncios.forEach(anuncio=>{const textoAnuncio=removeAcentos(anuncio.innerText.toLowerCase());const altImagem=removeAcentos(anuncio.querySelector('img').alt.toLowerCase());if(textoAnuncio.includes(termoDePesquisa)||altImagem.includes(termoDePesquisa)){anuncio.style.display='';}else{anuncio.style.display='none';}});}</script>
+</body>
+</html>
